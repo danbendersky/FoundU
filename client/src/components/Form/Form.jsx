@@ -10,7 +10,7 @@ export default function Form() {
                 <img id="add-image" src={addImage}></img>
                 <Button label="Take" variant="contained" size="medium" id="take-button">Take</Button>
                 <TextField required label="Item Name" variant="standard" margin="normal" className="form-field"/>
-                <TextField required label="Location" variant="standard" margin="normal" className="form-field"/>
+                <TextField required label="Location" variant="standard" margin="normal" className="form-field" />
                 <TextField required label="Description" variant="standard" inputProps={{maxLength:150}} multiline margin="normal" className="form-field"/>
                 <Button label="Submit" type="submit" variant="contained" size="medium" id="submit-button">Post</Button>
             </form>
