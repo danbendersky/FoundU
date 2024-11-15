@@ -1,0 +1,24 @@
+#item-name {
+    background-color: black;
+}
+#item-form {
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    padding:1rem;
+}
+#submit-button {
+    margin-top:1rem;
+    width:20%;
+}
+#add-image {
+    width:75%;
+    align-self:center;
+    filter:invert();
+}
+.form-field .MuiInputBase-input  {
+    color:white;
+}
+.form-field .MuiInputLabel-root {
+    color:white;
+}
