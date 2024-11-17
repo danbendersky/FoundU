@@ -2,6 +2,7 @@ import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import "./Map.css"
 
 // Fix for missing marker icons in Leaflet
 delete L.Icon.Default.prototype._getIconUrl;
@@ -49,11 +50,12 @@ const Map = () => {
 
       {/* Add the markers */}
       {markers.map((marker) => {
-        const customIcon = new L.Icon({
-          iconUrl: marker.imageUrl,  // URL of the image
-          iconSize: [40, 40],         // Size of the image
-          iconAnchor: [20, 40],       // Position of the image
-          popupAnchor: [0, -40],      // Position of the popup relative to the image
+        const customIcon = new L.divIcon({
+            className: "custom-icon",
+            html: `<div class="rounded-marker" style="background-image: url('${marker.imageUrl}'); border-color: ${marker.borderColor};"></div>`,
+            iconSize: [40, 40], // size of the marker
+            iconAnchor: [20, 40], // anchor the center of the icon
+            popupAnchor: [0, -40], // position of the popup
         });
 
         return (
