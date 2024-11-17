@@ -1,0 +1,35 @@
+#item-name {
+    background-color: black;
+}
+#item-form {
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    padding:1rem;
+}
+#submit-button, #upload-btn {
+    margin-top:1rem;
+    width: 120px;
+    background-color: #881C1C;
+}
+#add-image {
+    width:75%;
+    align-self:center;
+}
+.form-field .MuiInputBase-input  {
+    color:white;
+}
+.form-field .MuiInputLabel-root {
+    color:white;
+}
+
+.form-field .MuiInput-underline:before{
+    border-bottom: 2px white solid;
+}
+.form-field .MuiInput-underline:hover:not(.Mui-disabled):before{
+    border-bottom: 2px white solid;
+}
+
+#upload-btn{
+    margin-top: 2rem;
+}
