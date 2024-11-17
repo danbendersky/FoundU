@@ -28,8 +28,8 @@ const Map = () => {
 
   return (
     <MapContainer
-      center={[42.373611, -72.519444]} // Initial map position
-      zoom={15}
+      center={[42.390266, -72.528215]} // Initial map position. Currently set to umass library
+      zoom={16}
       style={{ height: "500px", width: "100%" }}
     >
       {/* Add the tile layer (map background) */}

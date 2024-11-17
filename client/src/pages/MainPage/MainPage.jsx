@@ -5,7 +5,7 @@ import "./MainPage.css"
 import Typography from '@mui/material/Typography'
 import ButtonGroup from '../../components/ButtonGroup/ButtonGroup'
 import "leaflet/dist/leaflet.css";
-// import Map from '../../components/Map/Map'
+import Map from '../../components/Map/Map'
 function MainPage() {
   return (
     <>
