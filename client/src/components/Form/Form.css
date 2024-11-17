@@ -7,15 +7,14 @@
     justify-content: space-around;
     padding:1rem;
 }
-#submit-button, #take-button {
+#submit-button, #upload-btn {
     margin-top:1rem;
-    width:20%;
+    width: 120px;
     background-color: #881C1C;
 }
 #add-image {
     width:75%;
     align-self:center;
-    filter:invert();
 }
 .form-field .MuiInputBase-input  {
     color:white;
@@ -31,6 +30,6 @@
     border-bottom: 2px white solid;
 }
 
-#take-button{
-    margin-top: 0;
+#upload-btn{
+    margin-top: 2rem;
 }
