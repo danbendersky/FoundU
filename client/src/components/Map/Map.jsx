@@ -15,22 +15,31 @@ const Map = () => {
   // Define the markers with images
   const markers = [
     {
-      position: [42.373611, -72.519444], // Example: Amherst, MA
-      image: "https://via.placeholder.com/100", // Replace with your image URL
-      title: "Node 1",
-    },
-    {
-      position: [42.373221, -72.515556], // Nearby example position
-      image: "https://via.placeholder.com/100",
-      title: "Node 2",
-    },
+        id: 1,
+        position: [42.38956576685282, -72.52930952592146],
+        imageUrl: "https://media-photos.depop.com/b1/11248688/2253668468_2360efcca1344741aa244ca90f281abd/P0.jpg",
+        title: "Gray Stanley",
+        description: "I found this bottle in South College room 107. I put it at the front of the room, under the table."
+      },
+      {
+        id: 2,
+        position: [42.38966828460359, -72.52817361038463],
+        imageUrl: "https://i.postimg.cc/0QCJ09LW/black-bottle-library.jpg",
+        title: "Black Bottle",
+        description: "Found in library recess. Gave to front desk of library."
+      },
   ];
 
   return (
     <MapContainer
       center={[42.390266, -72.528215]} // Initial map position. Currently set to umass library
-      zoom={16}
-      style={{ height: "500px", width: "100%" }}
+      zoom={17}
+      style={{ 
+        height: "80vh", 
+        width: "98%",
+        border: "4px solid #881C1C", // Add a border
+        borderRadius: "8px" // Optional: rounded corners 
+        }}
     >
       {/* Add the tile layer (map background) */}
       <TileLayer
@@ -39,20 +48,25 @@ const Map = () => {
       />
 
       {/* Add the markers */}
-      {markers.map((marker, index) => (
-        <Marker key={index} position={marker.position}>
-          <Popup>
-            <div style={{ textAlign: "center" }}>
-              <img
-                src={marker.image}
-                alt={marker.title}
-                style={{ width: "100px", height: "100px" }}
-              />
-              <p>{marker.title}</p>
-            </div>
-          </Popup>
-        </Marker>
-      ))}
+      {markers.map((marker) => {
+        const customIcon = new L.Icon({
+          iconUrl: marker.imageUrl,  // URL of the image
+          iconSize: [40, 40],         // Size of the image
+          iconAnchor: [20, 40],       // Position of the image
+          popupAnchor: [0, -40],      // Position of the popup relative to the image
+        });
+
+        return (
+          <Marker key={marker.id} position={marker.position} icon={customIcon}>
+           <Popup>
+              <div>
+                <h3>{marker.title}</h3> {/* Title in the popup */}
+                <p>{marker.description}</p> {/* Description in the popup */}
+              </div>
+            </Popup>
+          </Marker>
+        );
+      })}
     </MapContainer>
   );
 };
