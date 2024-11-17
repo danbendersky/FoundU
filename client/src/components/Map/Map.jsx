@@ -29,6 +29,27 @@ const Map = () => {
         title: "Black Bottle",
         description: "Found in library recess. Gave to front desk of library."
       },
+      {
+        id: 3,
+        position: [42.387620494128115, -72.52104798475177],
+        imageUrl: "https://i.postimg.cc/mrXVNcst/image.png",
+        title: "Cap",
+        description: "Found this in Gorman Hall 2nd floor, in front of the men's bathroom. I gave it to the RA in room 214"
+      },
+      {
+        id: 4,
+        position: [42.39314312105638, -72.52787630819955],
+        imageUrl: "https://i.postimg.cc/v89LD2c1/image.png",
+        title: "Purple Notebook",
+        description: "Found in Goessmann Lab 152, left it on the desk"
+      },
+      {
+        id: 5,
+        position: [42.39086179629019, -72.5256003428567],
+        imageUrl: "https://i.postimg.cc/C18DBdLy/image.png",
+        title: "UMass water bottle",
+        description: "Found in ILC, in front of room 210. Left it there"
+      }
   ];
 
   return (
