@@ -1,3 +1,4 @@
+import './ButtonGroup.css';
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
@@ -15,9 +16,9 @@ export default function VariantButtonGroup() {
         },
       }}
     >
-      <ButtonGroup variant="outlined" aria-label="Basic button group" className = "navigation-buttons">
-        <Button>Add Item</Button>
-        <Button>Search & Filter</Button>
+      <ButtonGroup variant="contained" aria-label="Basic button group" className = "nav-buttons">
+        <Button id = "add-item">Add Item</Button>
+        <Button id = "filter">Search & Filter</Button>
       </ButtonGroup>
     </Box>
   );
