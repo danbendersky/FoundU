@@ -49,6 +49,13 @@ const Map = () => {
         imageUrl: "https://i.postimg.cc/C18DBdLy/image.png",
         title: "UMass water bottle",
         description: "Found in ILC, in front of room 210. Left it there"
+      },
+      {
+        id: 6,
+        position: [42.38889794973198, -72.53205443604656],
+        imageUrl: "https://i.postimg.cc/3JYv0R2s/image.png",
+        title: "UMass bag",
+        description: "Found outside the Rec center, gave it to the staff in rec center."
       }
   ];
 
