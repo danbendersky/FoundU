@@ -34,7 +34,7 @@ function ItemPage() {
         <h3 className = "location description">Location Description: </h3>
         <p className = "mtop0 description">Found in the lobby of the ILC. In the blue chair. </p>
         <h3 className = "mtop0 description">Posted: </h3>
-        <p className = "description mtop0">October 30 {date}</p>
+        <p className = "description mtop0">{date}</p>
         <button className = "claim">Claim your Item! ✅</button>
         
     </div>
