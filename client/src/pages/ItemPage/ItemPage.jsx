@@ -16,7 +16,7 @@ function ItemPage() {
     const [search, setSearch] = useState()
 
     const handleItemChange = (event) =>{
-        setSearch(event.value)
+        setSearch(event.target.value)
     }
 
 
