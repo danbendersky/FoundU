@@ -1,0 +1,18 @@
+.custom-icon .rounded-marker {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Makes the marker circular */
+    border: 3px solid #881C1C; /* Border color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* Background color */
+    overflow: hidden; /* Ensures image fits inside the circle */
+    background-size: cover; /* Ensures the image zooms into the container */
+    background-position: center; /* Centers the zoomed-in image */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7); /* Add subtle shadow for depth */
+}
+  
+.custom-icon .rounded-marker img {
+    display: none;
+}
