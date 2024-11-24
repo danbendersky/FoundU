@@ -33,6 +33,15 @@ const itemSchema = new Schema({
         ref: 'User',
         required: true
     },
+    postDate: {
+        type: Date,
+        default: Date.now,
+    },
+    claimed: {
+        type: Boolean,
+        required: true,
+        default: false,
+    }
 });
 
 const Item = mongoose.model('Item', itemSchema);
