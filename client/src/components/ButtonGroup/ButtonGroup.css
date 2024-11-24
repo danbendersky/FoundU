@@ -1,0 +1,18 @@
+#add-item {
+    color: white;
+    background-color: #881C1C;
+}
+#filter {
+    color: white;
+    background-color: #881C1C;
+}
+
+.nav-buttons .MuiButton-root:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -1px; /* Adjust divider placement */
+  bottom: 0;
+  width: 2px;
+  background-color: black; /* Divider color */
+}
