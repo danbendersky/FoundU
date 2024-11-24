@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './ItemPage.css';
+import './ItemDescription.css';
 import Item from './Item'
 
 function ItemPage() {
@@ -23,7 +23,6 @@ function ItemPage() {
   return (
     <>
     <div className = "parent">
-        
         <input 
         className = "search"
         type = "text"
