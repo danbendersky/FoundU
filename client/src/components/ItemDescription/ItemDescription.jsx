@@ -23,7 +23,6 @@ function ItemPage() {
   return (
     <>
     <div className = "parent">
-        
         <input 
         className = "search"
         type = "text"
