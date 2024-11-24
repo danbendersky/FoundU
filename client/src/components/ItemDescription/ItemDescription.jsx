@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './ItemPage.css';
+import './ItemDescription.css';
 import Item from './Item'
 
 function ItemPage() {
