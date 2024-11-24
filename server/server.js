@@ -17,11 +17,11 @@ connection.once('open', () => {
 });
 
 //Define routes
+const itemRouter = require('./routes/items');
+app.use('/items', itemRouter);
+
 const userRouter = require('./routes/users');
 app.use('/users', userRouter);
-
-const eventRouter = require('./routes/events');
-app.use('/events', eventRouter);
 
 // Start listen
 app.listen(PORT, () => {
