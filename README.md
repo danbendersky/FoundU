@@ -1,5 +1,5 @@
 # FoundU
-A lost and found map website designed for college campuses.
+A lost and found map website designed for college students.
 
 **How to start**
 To run the project, first install the required packages
