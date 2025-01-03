@@ -5,6 +5,13 @@ import ButtonGroup from '@mui/material/ButtonGroup';
 import Box from '@mui/material/Box';
 
 export default function VariantButtonGroup() {
+  const handleAddItemClick = () => {
+    window.location.href = '/client/src/pages/FormPage/post.html';
+  }
+  const handleFilterClick = () => {
+    //This does not exist yet
+    //window.location.href = '/client/src/pages/...'
+  }
   return (
     <Box
       sx={{
@@ -17,8 +24,8 @@ export default function VariantButtonGroup() {
       }}
     >
       <ButtonGroup variant="contained" aria-label="Basic button group" className = "nav-buttons">
-        <Button id = "add-item">Add Item</Button>
-        <Button id = "filter">Search & Filter</Button>
+        <Button id = "add-item" onClick={handleAddItemClick}>Add Item</Button>
+        <Button id = "filter" onClick={handleFilterClick}>Search & Filter</Button>
       </ButtonGroup>
     </Box>
   );
