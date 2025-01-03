@@ -18,18 +18,6 @@ router.post('/postItem', async (req, res) => {
 
 
 //Patch item to be claimed
-router.patch('/claimItem', async (req, res) => {
-    try {
-        const {userId, itemId} = req.body;
-        const user = await User.findbyId(userId);
-        if (!user){return res.status(404).json({ error: 'User not found' });}
-        user.postedItems.push(itemId);
-        const updatedUser = await user.save();
-        res.status(200).json(updatedUser);
-    } catch  (error) {
-        res.status(500).json({ error: 'Failed to update user\'s items' });
-    }
-});
 
 //Put item when item is updated (only by user who created it)
 
