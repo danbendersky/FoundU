@@ -35,12 +35,11 @@ const itemSchema = new Schema({
     },
     postDate: {
         type: Date,
-        default: Date.now,
+        default: Date.now
     },
     claimed: {
         type: Boolean,
-        required: true,
-        default: false,
+        default: false
     }
 });
 
