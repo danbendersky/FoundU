@@ -10,11 +10,12 @@ router.post('/postItem', async (req, res) => {
         await item.save();
         res.status(201).json(item);
     } catch (error) {
-        res.status(400).json({ error: 'Failed to create item ' });
+        res.status(400).json({ error: 'Failed to create item' });
     }
 });
 
 //Get all items
+
 
 //Patch item to be claimed
 
