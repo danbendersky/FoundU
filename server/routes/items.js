@@ -27,8 +27,31 @@ router.get('items', async(req, res) =>{
 
 //Patch item to be claimed
 router.patch('claimItem/:itemId', async(req, res) =>{
+    try {
+        const {itemID} = req.params;
+        const {userID} = req.body;
+        
+        const item = await Item.findById(itemId);
+        if(!item) {
+            return res.status(404).json({ error: 'Could not find item'});
+        }
 
-})
+        if(item.claimed) {
+            return res.status(400).json({ error: 'Item has been claimed already'});
+        }
+
+        item.claimed = true;
+        await item.save();
+        const user = await User.findbyId(userId);
+        if (user) {
+            user.postedItems.push(itemId);
+            await user.save();
+        }
+        resizeTo.status(200).json(item);
+    } catch(error) {
+        res.status(500).json({ error: 'Item claim Failed'})
+    }
+});
 
 //Put item when item is updated (only by user who created it)
 
