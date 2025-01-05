@@ -15,17 +15,20 @@ router.post('/postItem', async (req, res) => {
 });
 
 //Get all items
-router.get('items', async(req, res) =>){
+router.get('items', async(req, res) =>{
     try{
         const items = await Item.find();
         res.status(200).json(items);
     } catch(error){
         res.status(500).json({ error: 'Failed to get items'});
     }
-}
+});
 
 
 //Patch item to be claimed
+router.patch('claimItem/:itemId', async(req, res) =>{
+
+})
 
 //Put item when item is updated (only by user who created it)
 
