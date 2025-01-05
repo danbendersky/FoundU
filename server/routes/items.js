@@ -56,6 +56,34 @@ router.patch('/claimItem/:itemId', async(req, res) =>{
 //Put item when item is updated (only by user who created it)
 
 //Delete item (only by user who created it), and call patch on user
+router.delete('/deleteItem/:itemId', async (req, res) => {
+    try {
+        const {itemId} = req.params;
+        const {userId} = req.body;
+
+        const item = await Item.findById(itemId);
+        if (!item) {
+            return res.status(404).json({ error: 'Item not found' });
+        }
+
+        if (item.creator.toString() !== userId) { 
+            return res.status(403).json({ error: 'You are not authorized to delete this item' });
+        }
+
+        await item.remove();
+
+        const user = await User.findById(userId);
+        if (user) {
+            user.postedItems = user.postedItems.filter(id => id.toString() !== itemId);
+            await user.save();
+        }
+
+        res.status(200).json({ message: 'Item deleted successfully' });
+
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to delete item' });
+    }
+});
 
 
 //1 week deleting items (happens automatically), and call patch on user
