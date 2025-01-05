@@ -26,10 +26,10 @@ router.get('/items', async(req, res) =>{
 
 
 //Patch item to be claimed
-router.patch('claimItem/:itemId', async(req, res) =>{
+router.patch('/claimItem/:itemId', async(req, res) =>{
     try {
-        const {itemID} = req.params;
-        const {userID} = req.body;
+        const {itemId} = req.params;
+        const {userId} = req.body;
         
         const item = await Item.findById(itemId);
         if(!item) {
@@ -42,12 +42,12 @@ router.patch('claimItem/:itemId', async(req, res) =>{
 
         item.claimed = true;
         await item.save();
-        const user = await User.findbyId(userId);
+        const user = await User.findById(userId);
         if (user) {
             user.postedItems.push(itemId);
             await user.save();
         }
-        resizeTo.status(200).json(item);
+        res.status(200).json(item);
     } catch(error) {
         res.status(500).json({ error: 'Item claim Failed'})
     }
